@@ -1,0 +1,32 @@
+{
+  "name": "endec-mon",
+  "version": "1.0.0",
+  "description": "Monitoring program for the Sage Alerting Systems ENDEC (Model 1822)",
+  "main": "monitor.js",
+  "dependencies": {
+    "request": "^2.62.0",
+    "serialport": "^1.7.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshuaferrara/endec-mon.git"
+  },
+  "keywords": [
+    "endec",
+    "eas",
+    "emergency",
+    "alert",
+    "system",
+    "sage"
+  ],
+  "author": "Joshua Ferrara",
+  "license": "CC BY-NC 4.0 http://creativecommons.org/licenses/by-nc/4.0/",
+  "bugs": {
+    "url": "https://github.com/joshuaferrara/endec-mon/issues"
+  },
+  "homepage": "https://github.com/joshuaferrara/endec-mon#readme"
+}
