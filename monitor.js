@@ -4,16 +4,18 @@ var request = require("request");
 var fs = require("fs");
 var config = require("./config");
 
+var debug = false;
+
 var serialPort = new SerialPort("/dev/ttyUSB0", {
 	baudrate: 9600,
 	parser: serialport.parsers.readline("<ENDECEND>"),
 });
 
 serialPort.on("open", function() {
-	console.log("ENDEC serial connection opened!");
+	if(debug) console.log("ENDEC serial connection opened!");
 
 	serialPort.on("data", function(data) {
-		console.log("Got data from endec: " + data);
+		if (debug) console.log("Got data from endec: " + data);
 		request.post(config.iftttURL, function(err, resp, body) {
 			console.log(body);
 		});
