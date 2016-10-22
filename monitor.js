@@ -20,8 +20,7 @@ serialPort.on("open", function() {
 			console.log(body);
 		});
 		fs.appendFile("alerts.txt", data, function(err) {
-			if (err)
-				console.error(err);
+			if (err) console.error(err);
 		});
 		fs.appendFile("alerts.txt", "<ENDECEND>", function(err) {
 
